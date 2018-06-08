@@ -8,6 +8,13 @@ import java.util.concurrent.ConcurrentSkipListSet;
 public class SellOrderSet {
     private static ConcurrentSkipListSet<SellOrder> sellSet = new ConcurrentSkipListSet();
 
+    public static ConcurrentSkipListSet<SellOrder> getSellSet() {
+        return sellSet;
+    }
+
+    public static void setSellSet(ConcurrentSkipListSet<SellOrder> sellSet) {
+        SellOrderSet.sellSet = sellSet;
+    }
 
     public static void main(String[] args) {
         SellOrder sellOrder = new SellOrder();
